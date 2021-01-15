@@ -41,28 +41,34 @@ const Settings = () => {
   return (
     <Wrapper>
         <form onSubmit={handleSubmit}>
-            <EdsTextfield
-                type="text"
-                label="Email"
-                aria-readonly
-                value={userContext.email}
-            />
-            <EdsTextfield
-                type="text"
-                placeholder="Username"
-                name="username"
-                label="Change username"
-                value={updateUsername}
-                onValueChange={e => onChangeHandler(e)}
-            />
-            <EdsTextfield
-                type="text"
-                placeholder="Phonenumber"
-                label="Change phonenumber"
-                name="phonenumber"
-                value={updatePhonenumber}
-                onValueChange={e => onChangeHandler(e)}
-            />
+            <div className="mb">
+                <EdsTextfield
+                    type="text"
+                    label="Email"
+                    aria-readonly
+                    value={userContext.email}
+                />
+            </div>
+            <div className="mb">
+                <EdsTextfield
+                    type="text"
+                    placeholder="Username"
+                    name="username"
+                    label="Change username"
+                    value={updateUsername}
+                    onValueChange={e => onChangeHandler(e)}
+                />
+            </div>
+            <div className="mb">
+                <EdsTextfield
+                    type="text"
+                    placeholder="Phonenumber"
+                    label="Change phonenumber"
+                    name="phonenumber"
+                    value={updatePhonenumber}
+                    onValueChange={e => onChangeHandler(e)}
+                />
+            </div>
             <eds-button type="submit" variant="primary">Submit</eds-button>
         </form>
     </Wrapper>

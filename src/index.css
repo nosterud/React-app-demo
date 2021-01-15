@@ -7,3 +7,7 @@ body {
 .headerComp {
   width: 100%;
 }
+
+.mb {
+  margin-bottom: 16px;
+}

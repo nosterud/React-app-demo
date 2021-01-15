@@ -14,21 +14,27 @@ const Settings = () => {
 
   return (
     <Wrapper>
-        <EdsTextfield
-            type="password"
-            label="Old Password"
-            placeholder="Password"
-        />
-        <EdsTextfield
-            type="password"
-            placeholder="New Password"
-            label="Change username"
-        />
-        <EdsTextfield
-            type="password"
-            placeholder="Password"
-            label="New password again"
-        />
+        <div className="mb">
+            <EdsTextfield
+                type="password"
+                label="Old Password"
+                placeholder="Password"
+            />
+        </div>
+        <div className="mb">
+            <EdsTextfield
+                type="password"
+                placeholder="New Password"
+                label="Change username"
+            />
+        </div>
+        <div className="mb">
+            <EdsTextfield
+                type="password"
+                placeholder="Password"
+                label="New password again"
+            />
+        </div>
     </Wrapper>
   )
 };

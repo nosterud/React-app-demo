@@ -29,9 +29,10 @@ const Wrapper = styled.div`
 
 const ButtonWrapper = styled.div`
     padding: 28px;
-    display: flex;
-    justify-content: space-between;
-    width: 40%;
+
+  & > eds-button {
+    margin-right: 16px;
+  }
 `;
 
 const DesignSystem = () => {
@@ -47,26 +48,21 @@ const DesignSystem = () => {
       setComp('pros')
       setActive(true)
     } else if (id === 'challenges') {
-      setComp('challenges')
-      setActive(true)
+        setComp('challenges')
+        setActive(true)
     } else if (id === 'how-to'){
-      setComp('how-to');
-      setActive(true)
+        setComp('how-to');
+        setActive(true)
     } else if (id === 'use-case'){
-      setComp('use-case');
-      setActive(true)
+        setComp('use-case');
+        setActive(true)
     }
   }
 
   return (
     <Wrapper>
         <h1>Hvordan gjøre seg beredt på fremtiden?</h1>
-        {comp === "introduction" && <SlideInWrapper active={active}><Introduction /></SlideInWrapper>}
-        {comp === "pros" && <SlideInWrapper active={active}><Pros /></SlideInWrapper>}
-        {comp === "challenges" && <SlideInWrapper active={active}><Challenges /></SlideInWrapper>}
-        {comp === "how-to" && <SlideInWrapper active={active}><HowTo /></SlideInWrapper>}
-        {comp === "use-case" && <SlideInWrapper active={active}><UseCase /></SlideInWrapper>}
-      <ButtonWrapper>
+        <ButtonWrapper>
         <eds-button variant="outlined" id="introduction" onClick={(e) => changeSlide(e)}>
           Introduction
         </eds-button>
@@ -83,6 +79,11 @@ const DesignSystem = () => {
           Use Case
         </eds-button>
       </ButtonWrapper>
+        {comp === "introduction" && <SlideInWrapper active={active}><Introduction /></SlideInWrapper>}
+        {comp === "pros" && <SlideInWrapper active={active}><Pros /></SlideInWrapper>}
+        {comp === "challenges" && <SlideInWrapper active={active}><Challenges /></SlideInWrapper>}
+        {comp === "how-to" && <SlideInWrapper active={active}><HowTo /></SlideInWrapper>}
+        {comp === "use-case" && <SlideInWrapper active={active}><UseCase /></SlideInWrapper>}
     </Wrapper>
   )
 };
